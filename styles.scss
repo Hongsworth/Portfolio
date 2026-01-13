@@ -1,0 +1,139 @@
+@use "./modules/media.scss";
+@use "./modules/mixins.scss";
+
+.header {
+    margin: 3rem;
+    @include media.mobile {
+        display: none;
+    }
+    @include media.desktop {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+
+        &__name {
+            @include mixins.font-style(Inter, 700, 30px);
+        }
+    }
+}
+
+.nav {
+    display: flex;
+    flex-direction: row;
+    width: 35vw;
+    justify-content: space-around;
+    align-items: center;
+
+    &__link {
+        border: none;
+        background-color: white;
+    }
+
+    &__link:hover {
+        text-decoration: underline;
+        cursor: pointer;
+    }
+
+    &--contact {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: white;
+        border-radius: 6px;
+        width: 70px;
+        height: 33px;
+    }
+
+    &--contact:hover {
+        background-color: lightgrey;
+        cursor: pointer;
+    }
+}
+
+.landing {
+    @include media.mobile {
+        display: flex;
+        flex-direction: column;
+
+        &__info {
+            &--greeting {
+                @include mixins.font-style(Inter, 500, 21px);
+                margin: 2.5rem 1.5rem 1.5rem 1.5rem;
+            }
+            &--description {
+                @include mixins.font-style(Inter, 625, 40px);
+                margin: 1.5rem 1.5rem;
+            }
+        }
+    }
+
+    @include media.desktop {
+        display: flex;
+        flex-direction: column;
+
+        &__info {
+            width: 55vw;
+            &--greeting {
+                @include mixins.font-style(Inter, 500, 21px);
+                margin: 2.5rem 3rem 1.5rem 3rem;
+            }
+            &--description {
+                @include mixins.font-style(Inter, 625, 40px);
+                margin: 1.5rem 3rem;
+            }
+        }
+    }
+}
+
+.about-me {
+    &__text {
+        &--title {
+            @include mixins.font-style(Inter, 500, 35px);
+        }
+    }
+}
+
+.technical {
+    display: flex;
+    flex-direction: column;
+    margin: 2rem;
+    &__title {
+        display: flex;
+        justify-content: center;
+        @include mixins.font-style(Inter, 600, 26px);
+    }
+}
+
+.skills {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+
+    width: 90vw;
+    margin: 0 auto;
+
+    &__item {
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        width: 75px;
+        margin: 15px;
+    }
+
+    &__icon {
+        width: 70px;
+    }
+}
+
+.footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    margin: 0 auto;
+    background-color: black;
+    height: 70px;
+    width: 100vw;
+}

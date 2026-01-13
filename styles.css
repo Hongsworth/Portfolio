@@ -1,0 +1,139 @@
+.header {
+  margin: 3rem;
+}
+@media only screen and (max-width: 568px) {
+  .header {
+    display: none;
+  }
+}
+@media only screen and (min-width: 569px) {
+  .header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .header__name {
+    font-family: Inter;
+    font-weight: 700;
+    font-size: 30px;
+  }
+}
+
+.nav {
+  display: flex;
+  flex-direction: row;
+  width: 35vw;
+  justify-content: space-around;
+  align-items: center;
+}
+.nav__link {
+  border: none;
+  background-color: white;
+}
+.nav__link:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+.nav--contact {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  border-radius: 6px;
+  width: 70px;
+  height: 33px;
+}
+.nav--contact:hover {
+  background-color: lightgrey;
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 568px) {
+  .landing {
+    display: flex;
+    flex-direction: column;
+  }
+  .landing__info--greeting {
+    font-family: Inter;
+    font-weight: 500;
+    font-size: 21px;
+    margin: 2.5rem 1.5rem 1.5rem 1.5rem;
+  }
+  .landing__info--description {
+    font-family: Inter;
+    font-weight: 625;
+    font-size: 40px;
+    margin: 1.5rem 1.5rem;
+  }
+}
+@media only screen and (min-width: 569px) {
+  .landing {
+    display: flex;
+    flex-direction: column;
+  }
+  .landing__info {
+    width: 55vw;
+  }
+  .landing__info--greeting {
+    font-family: Inter;
+    font-weight: 500;
+    font-size: 21px;
+    margin: 2.5rem 3rem 1.5rem 3rem;
+  }
+  .landing__info--description {
+    font-family: Inter;
+    font-weight: 625;
+    font-size: 40px;
+    margin: 1.5rem 3rem;
+  }
+}
+
+.about-me__text--title {
+  font-family: Inter;
+  font-weight: 500;
+  font-size: 35px;
+}
+
+.technical {
+  display: flex;
+  flex-direction: column;
+  margin: 2rem;
+}
+.technical__title {
+  display: flex;
+  justify-content: center;
+  font-family: Inter;
+  font-weight: 600;
+  font-size: 26px;
+}
+
+.skills {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 90vw;
+  margin: 0 auto;
+}
+.skills__item {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  width: 75px;
+  margin: 15px;
+}
+.skills__icon {
+  width: 70px;
+}
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  margin: 0 auto;
+  background-color: black;
+  height: 70px;
+  width: 100vw;
+}

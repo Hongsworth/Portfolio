@@ -1,0 +1,10 @@
+@mixin font-style($type, $thickness, $size){
+    font-family: $type;
+    font-weight: $thickness;
+    font-size: $size;
+}
+
+@mixin flex-layout($dir){
+    display: flex;
+    flex-direction: $dir;
+}
