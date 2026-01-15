@@ -28,7 +28,12 @@
                 >
                     Projects
                 </button>
-                <button class="nav--contact">Contact</button>
+                <button
+                    class="nav--contact"
+                    onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'});"
+                >
+                    Contact
+                </button>
             </nav>
         </header>
 
@@ -239,7 +244,7 @@
             </div>
         </div> -->
 
-        <section id="resume" class="resume">
+        <div id="resume" class="resume">
             <div class="resume__title">
                 <h2>Resume</h2>
             </div>
@@ -360,7 +365,40 @@
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
+
+        <div class="contact" id="contact">
+            <h1 class="contact__title">Contact</h1>
+            <p class="contact__info">
+                Please contact me for work opportunities and any request for
+                information.
+            </p>
+            <div class="info">
+                <div class="info__item info__item--email">
+                    <button class="info__icon info__icon--email">
+                        <img
+                            class="info__image info__image--email"
+                            src="./assets/img/email.png"
+                            alt=""
+                        />
+                    </button>
+                    <h4 class="info__name">Email:</h4>
+                    <p class="info__text">chenghongren.impt@gmail.com</p>
+                </div>
+                <div class="info__item info__item--phone">
+                    <button class="info__icon info__icon--phone">
+                        <img
+                            class="info__image info__image--phone"
+                            src="./assets/img/phone.png"
+                            alt=""
+                        />
+                    </button>
+                    <h4 class="info__name">Call:</h4>
+                    <p class="info__text">+44 7473 882788</p>
+                </div>
+            </div>
+            <div></div>
+        </div>
 
         <footer class="footer">
             <div class="fcontainer">
