@@ -229,6 +229,10 @@ a {
         justify-content: center;
         align-items: center;
 
+        @include media.mobile {
+            width: 350px;
+        }
+
         &--title {
             margin: 30px;
             margin-bottom: 10px;
@@ -257,6 +261,10 @@ a {
         flex-direction: column;
         width: 400px;
         margin: 30px;
+
+        @include media.mobile {
+            width: 350px;
+        }
 
         &--title {
             @include mixins.font-style(Inter, 500, 23px);

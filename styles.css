@@ -241,6 +241,11 @@ a {
   justify-content: center;
   align-items: center;
 }
+@media only screen and (max-width: 568px) {
+  .project-list__item {
+    width: 350px;
+  }
+}
 .project-list__item--title {
   margin: 30px;
   margin-bottom: 10px;
@@ -271,6 +276,11 @@ a {
   flex-direction: column;
   width: 400px;
   margin: 30px;
+}
+@media only screen and (max-width: 568px) {
+  .resume__block {
+    width: 350px;
+  }
 }
 .resume__block--title {
   font-family: Inter;
