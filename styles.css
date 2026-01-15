@@ -1,3 +1,12 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
 .header {
   margin: 3rem;
 }
@@ -51,8 +60,14 @@
 
 @media only screen and (max-width: 568px) {
   .landing {
+    height: 300px;
+    background-image: url(./assets/img/Imperial_background.jpg);
+    background-color: rgba(255, 255, 255, 0.65);
+    background-blend-mode: lighten;
+    background-size: 1920px 800px;
     display: flex;
     flex-direction: column;
+    margin-bottom: 100px;
   }
   .landing__info--greeting {
     font-family: Inter;
@@ -69,8 +84,14 @@
 }
 @media only screen and (min-width: 569px) {
   .landing {
+    height: 400px;
+    background-image: url(./assets/img/Imperial_background.jpg);
+    background-color: rgba(255, 255, 255, 0.65);
+    background-blend-mode: lighten;
+    background-size: 1920px 800px;
     display: flex;
     flex-direction: column;
+    justify-content: center;
   }
   .landing__info {
     width: 55vw;
@@ -89,16 +110,73 @@
   }
 }
 
+.about-me {
+  margin: 0px 100px;
+}
+@media only screen and (max-width: 568px) {
+  .about-me {
+    margin: 60px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .about-me__img {
+    width: 70vw;
+  }
+}
+@media only screen and (min-width: 569px) {
+  .about-me {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+  .about-me__img {
+    width: 250px;
+  }
+}
+.about-me__text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  margin: 60px;
+  margin-right: 0px;
+}
+@media only screen and (max-width: 568px) {
+  .about-me__text {
+    margin: 20px;
+    align-items: center;
+  }
+}
 .about-me__text--title {
   font-family: Inter;
   font-weight: 500;
   font-size: 35px;
+  margin: 20px;
+}
+.about-me__text--description {
+  text-align: left;
+  margin: 20px;
+  font-family: Inter;
+  font-weight: 400;
+  font-size: 23px;
+}
+@media only screen and (max-width: 568px) {
+  .about-me__text--description {
+    text-align: center;
+    font-family: Inter;
+    font-weight: 400;
+    font-size: 20px;
+  }
 }
 
 .technical {
   display: flex;
   flex-direction: column;
   margin: 2rem;
+  justify-content: center;
 }
 .technical__title {
   display: flex;
@@ -125,15 +203,107 @@
   margin: 15px;
 }
 .skills__icon {
-  width: 70px;
+  width: 65px;
+}
+
+.project {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 50px;
+}
+
+.project-list {
+  display: flex;
+}
+@media only screen and (min-width: 569px) {
+  .project-list {
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+}
+@media only screen and (max-width: 568px) {
+  .project-list {
+    flex-direction: column;
+  }
+}
+.project-list__item {
+  width: 400px;
+  height: 500px;
+  margin: 40px;
+  border-radius: 10px;
+  background-color: rgba(86, 203, 249, 0.3);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.project-list__item--title {
+  margin: 30px;
+  margin-bottom: 10px;
+  font-family: Inter;
+  font-weight: 500;
+  font-size: 20px;
+}
+.project-list__item--text {
+  margin: 30px;
+  margin-top: 10px;
+  font-family: Inter;
+  font-weight: 400;
+  font-size: 16px;
+}
+.project-list__item--img {
+  width: 320px;
+  border-radius: 10px;
 }
 
 .footer {
-  position: fixed;
+  position: static;
   bottom: 0;
   left: 0;
-  margin: 0 auto;
+  margin: 0;
   background-color: black;
   height: 70px;
-  width: 100vw;
+}
+@media only screen and (max-width: 568px) {
+  .footer {
+    height: 150px;
+  }
+}
+
+.fcontainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  margin: 0px;
+  height: 70px;
+}
+@media only screen and (max-width: 568px) {
+  .fcontainer {
+    height: 150px;
+    justify-content: center;
+  }
+}
+.fcontainer__button {
+  margin: 20px;
+  border: 0px;
+  border-radius: 100%;
+  height: 40px;
+  width: 40px;
+  background-size: 30px 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.fcontainer__button--cv {
+  font-family: Inter;
+  font-weight: 600;
+  font-size: 18px;
+}
+.fcontainer__button--img {
+  width: 30px;
 }

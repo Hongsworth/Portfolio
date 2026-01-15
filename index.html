@@ -1,95 +1,245 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
-    <title>Chenghong Ren</title>
-</head>
-<body>
-    <header class="header">
-        <h1 class="header__name">Chenghong Ren</h1>
-        <nav class="nav">
-            <button class="nav__link nav__links--home">Home</button>
-            <button class="nav__link nav__links--about">About</button>
-            <button class="nav__link nav__links--project">Projects</button>
-            <button class="nav--contact">Contact</button>
-        </nav>
-    </header>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="styles.css" />
+        <title>Chenghong Ren</title>
+    </head>
+    <body>
+        <header class="header">
+            <h1 class="header__name">Chenghong Ren</h1>
+            <nav class="nav">
+                <button
+                    class="nav__link nav__links--home"
+                    onclick="document.getElementById('header').scrollIntoView();"
+                >
+                    Home
+                </button>
+                <button
+                    class="nav__link nav__links--about"
+                    onclick="document.getElementById('about-me').scrollIntoView({behavior: 'smooth'});"
+                >
+                    About
+                </button>
+                <button
+                    class="nav__link nav__links--project"
+                    onclick="document.getElementById('project').scrollIntoView({behavior: 'smooth'});"
+                >
+                    Projects
+                </button>
+                <button class="nav--contact">Contact</button>
+            </nav>
+        </header>
 
-    <div class="landing">
-        <div class="landing__info">
-            <h3 class="landing__info--greeting">Hi, I'm Chenghong Ren</h1>
-            <p class="landing__info--description">A Graduate Software Engineer based in the UK</p>
+        <div class="landing">
+            <div class="landing__info">
+                <h1 class="landing__info--greeting">Hi, I'm Chenghong Ren</h1>
+                <p class="landing__info--description">
+                    A Graduate Software Engineer based in the UK
+                </p>
+            </div>
+            <div class="landing__image"></div>
         </div>
-        <div class="landing__image"></div>
-    </div>
 
-    <div class="about-me">
-        <img class="about-me__img" src="" alt="">
-        <div class="about-me__text">
-            <h1 class="about-me__text--title">About Me</h3>
-            <p class="about-me__text--description"></p>
+        <div class="about-me" id="about-me">
+            <img
+                class="about-me__img"
+                src="./assets/img/profile-img.jpg"
+                alt=""
+            />
+            <div class="about-me__text">
+                <h1 class="about-me__text--title">About Me</h1>
+                <p class="about-me__text--description">
+                    A Meng Electronic and Information Engineering graduate from
+                    Imperial College London and previous intern at Qualcomm.
+                    Passionate about a variety of technologies including
+                    wireless communication, computer architecture and machine
+                    learning.
+                </p>
+            </div>
         </div>
-    </div>
 
-    <div class="technical">
-        <h3 class="technical__title">Technical Skills</h3>
-        <p class="technical__description"></p>
-        <div class="skills">
-            <div class="skills__item">
-                <img class="skills__icon" src="./assets/logo/cpp_logo.svg" alt="">
-                <p></p>
-            </div>
-            <div class="skills__item">
-                <img class="skills__icon" src="./assets/logo/python_logo.svg" alt="">
-                <p></p>
-            </div>
-            <div class="skills__item">
-                <img class="skills__icon" src="./assets/logo/java_logo.svg" alt="">
-                <p></p>
-            </div>
-            <div class="skills__item">
-                <img class="skills__icon" src="./assets/logo/html_logo.svg" alt="">
-                <p></p>
-            </div>
-            <div class="skills__item">
-                <img class="skills__icon" src="./assets/logo/css_logo.svg" alt="">
-                <p></p>
-            </div>
-            <div class="skills__item">
-                <img class="skills__icon" src="./assets/logo/js_logo.svg" alt="">
-                <p></p>
-            </div>
-            <div class="skills__item">
-                <img class="skills__icon" src="./assets/logo/scss_logo.svg" alt="">
-                <p></p>
-            </div>  
-            <div class="skills__item">
-                <img class="skills__icon" src="./assets/logo/sb_logo.svg" alt="">
-                <p></p>
-            </div>
-            <div class="skills__item">
-                <img class="skills__icon" src="./assets/logo/git_logo.svg" alt="">
-                <p></p>
+        <div class="technical">
+            <h3 class="technical__title">Technical Skills</h3>
+            <p class="technical__description"></p>
+            <div class="skills">
+                <div class="skills__item">
+                    <img
+                        class="skills__icon"
+                        src="./assets/logo/cpp_logo.svg"
+                        alt=""
+                    />
+                    <p></p>
+                </div>
+                <div class="skills__item">
+                    <img
+                        class="skills__icon"
+                        src="./assets/logo/python_logo.svg"
+                        alt=""
+                    />
+                    <p></p>
+                </div>
+                <div class="skills__item">
+                    <img
+                        class="skills__icon"
+                        src="./assets/logo/java_logo.svg"
+                        alt=""
+                    />
+                    <p></p>
+                </div>
+                <div class="skills__item">
+                    <img
+                        class="skills__icon"
+                        src="./assets/logo/html_logo.svg"
+                        alt=""
+                    />
+                    <p></p>
+                </div>
+                <div class="skills__item">
+                    <img
+                        class="skills__icon"
+                        src="./assets/logo/css_logo.svg"
+                        alt=""
+                    />
+                    <p></p>
+                </div>
+                <div class="skills__item">
+                    <img
+                        class="skills__icon"
+                        src="./assets/logo/js_logo.svg"
+                        alt=""
+                    />
+                    <p></p>
+                </div>
+                <div class="skills__item">
+                    <img
+                        class="skills__icon"
+                        src="./assets/logo/scss_logo.svg"
+                        alt=""
+                    />
+                    <p></p>
+                </div>
+                <div class="skills__item">
+                    <img
+                        class="skills__icon"
+                        src="./assets/logo/sb_logo.svg"
+                        alt=""
+                    />
+                    <p></p>
+                </div>
+                <div class="skills__item">
+                    <img
+                        class="skills__icon"
+                        src="./assets/logo/git_logo.svg"
+                        alt=""
+                    />
+                    <p></p>
+                </div>
             </div>
         </div>
-    </div>
 
-    <div class="project">
-        <div class="project__item">
-            <img src="" alt="">
+        <div class="project" id="project">
+            <h1 class="project__title">Projects</h1>
+            <div class="project-list">
+                <div class="project-list__item project-list__item--ZCA">
+                    <img
+                        class="project-list__item--img"
+                        src="./assets/img/portfolio-9.png"
+                        alt=""
+                    />
+                    <h1 class="project-list__item--title">
+                        ZCA for polar transmitters
+                    </h1>
+                    <p class="project-list__item--text">
+                        A zero-crossing-avoidance algorithm designed for 16QAM
+                        polar transmitters. Help with reducing adjacent channel
+                        power leakage in Bluetooth devices.
+                    </p>
+                </div>
+                <div class="project-list__item project-list__item--embedded">
+                    <img
+                        class="project-list__item--img"
+                        src="./assets/img/portfolio-4.jpg"
+                        alt=""
+                    />
+                    <h1 class="project-list__item--title">Digital keyboard</h1>
+                    <p class="project-list__item--text">
+                        Created a digital keyboard using STM32 with added CAN
+                        bus functionality for connecting multiple keyboard.
+                        Added the ability to switch octaves and waveforms.
+                    </p>
+                </div>
+                <div class="project-list__item project-list__item--typescript">
+                    <img
+                        class="project-list__item--img"
+                        src="./assets/img/portfolio-10.jpg"
+                        alt=""
+                    />
+                    <h1 class="project-list__item--title">Web game</h1>
+                    <p class="project-list__item--text">
+                        Created a web based game using typescript
+                    </p>
+                </div>
+                <div class="project-list__item project-list__item--rover">
+                    <img
+                        class="project-list__item--img"
+                        src="./assets/img/portfolio-2.jpg"
+                        alt=""
+                    />
+                    <h1 class="project-list__item--title">Mars rover</h1>
+                    <p class="project-list__item--text">
+                        Created an autonomous rover which roams in a preset
+                        arena. Scanning functionality using radars and camera.
+                        The data is sent to AWS to be processed and displayed on
+                        a webpage for the user.
+                    </p>
+                </div>
+                <div class="project-list__item project-list__item--cpu">
+                    <img
+                        class="project-list__item--img"
+                        src="./assets/img/portfolio-1.PNG"
+                        alt=""
+                    />
+                    <h1 class="project-list__item--title">Dual core CPU</h1>
+                    <p class="project-list__item--text">
+                        Simulated a dual core CPU using the MIPS ISA and Issie
+                        program using gates. Added dual core functionality, UART
+                        and Brent–Kung adder. Won best 1st year final project
+                        award at Imperial.
+                    </p>
+                </div>
+            </div>
         </div>
-        <div class="project__item">
-            
-        </div>
-        <div class="project__item">
-            
-        </div>
-    </div>
 
-    <footer class="footer">
-    </footer>
-    
-</body>
+        <footer class="footer">
+            <div class="fcontainer">
+                <a href="https://github.com/Hongsworth"
+                    ><button class="fcontainer__button fcontainer__button--git">
+                        <img
+                            class="fcontainer__button--img"
+                            src="./assets/logo/github-mark.svg"
+                            alt=""
+                        /></button
+                ></a>
+                <a href="https://www.linkedin.com/in/chenghong-ren-5abb20202/">
+                    <button
+                        class="fcontainer__button fcontainer__button--linkedin"
+                        onclick=""
+                    >
+                        <img
+                            class="fcontainer__button--img"
+                            src="./assets/logo/icons-linkedin.svg"
+                            alt=""
+                        />
+                    </button>
+                </a>
+                <a href="./assets/file/CV__Nology_.pdf" download="CV_Chenghong"
+                    ><button class="fcontainer__button fcontainer__button--cv">
+                        CV
+                    </button></a
+                >
+            </div>
+        </footer>
+    </body>
 </html>

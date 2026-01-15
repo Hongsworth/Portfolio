@@ -1,6 +1,19 @@
 @use "./modules/media.scss";
 @use "./modules/mixins.scss";
 
+body {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+// img {
+//     overflow-x: hidden;
+// }
+
 .header {
     margin: 3rem;
     @include media.mobile {
@@ -53,8 +66,14 @@
 
 .landing {
     @include media.mobile {
+        height: 300px;
+        background-image: url(./assets/img/Imperial_background.jpg);
+        background-color: rgba($color: white, $alpha: 0.65);
+        background-blend-mode: lighten;
+        background-size: 1920px 800px;
         display: flex;
         flex-direction: column;
+        margin-bottom: 100px;
 
         &__info {
             &--greeting {
@@ -69,9 +88,14 @@
     }
 
     @include media.desktop {
+        height: 400px;
+        background-image: url(./assets/img/Imperial_background.jpg);
+        background-color: rgba($color: white, $alpha: 0.65);
+        background-blend-mode: lighten;
+        background-size: 1920px 800px;
         display: flex;
         flex-direction: column;
-
+        justify-content: center;
         &__info {
             width: 55vw;
             &--greeting {
@@ -87,9 +111,54 @@
 }
 
 .about-me {
+    margin: 0px 100px;
+    @include media.mobile {
+        margin: 60px 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        &__img {
+            width: 70vw;
+        }
+    }
+
+    @include media.desktop {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+
+        &__img {
+            width: 250px;
+        }
+    }
+
     &__text {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        margin: 60px;
+        margin-right: 0px;
+        @include media.mobile {
+            margin: 20px;
+            align-items: center;
+        }
+
         &--title {
             @include mixins.font-style(Inter, 500, 35px);
+            margin: 20px;
+        }
+        &--description {
+            text-align: left;
+            margin: 20px;
+            @include mixins.font-style(Inter, 400, 23px);
+            @include media.mobile {
+                text-align: center;
+                @include mixins.font-style(Inter, 400, 20px);
+            }
         }
     }
 }
@@ -98,6 +167,7 @@
     display: flex;
     flex-direction: column;
     margin: 2rem;
+    justify-content: center;
     &__title {
         display: flex;
         justify-content: center;
@@ -124,16 +194,96 @@
     }
 
     &__icon {
-        width: 70px;
+        width: 65px;
+    }
+}
+
+.project {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 50px;
+}
+
+.project-list {
+    display: flex;
+    @include media.desktop {
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+    @include media.mobile {
+        flex-direction: column;
+    }
+
+    &__item {
+        width: 400px;
+        height: 500px;
+        margin: 40px;
+        border-radius: 10px;
+        background-color: rgba($color: #56cbf9, $alpha: 0.3);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        &--title {
+            margin: 30px;
+            margin-bottom: 10px;
+            @include mixins.font-style(Inter, 500, 20px);
+        }
+        &--text {
+            margin: 30px;
+            margin-top: 10px;
+            @include mixins.font-style(Inter, 400, 16px);
+        }
+        &--img {
+            width: 320px;
+            border-radius: 10px;
+        }
     }
 }
 
 .footer {
-    position: fixed;
+    position: static;
     bottom: 0;
     left: 0;
-    margin: 0 auto;
+    margin: 0;
     background-color: black;
     height: 70px;
-    width: 100vw;
+    @include media.mobile {
+        height: 150px;
+    }
+}
+
+.fcontainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    margin: 0px;
+    height: 70px;
+    @include media.mobile {
+        height: 150px;
+        justify-content: center;
+    }
+    &__button {
+        margin: 20px;
+        border: 0px;
+        border-radius: 100%;
+        height: 40px;
+        width: 40px;
+        background-size: 30px 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        &--cv {
+            @include mixins.font-style(Inter, 600, 18px);
+        }
+        &--img {
+            width: 30px;
+        }
+    }
 }
